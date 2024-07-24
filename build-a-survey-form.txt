@@ -1,0 +1,281 @@
+** start of undefined **
+
+<DOCTYPE!html>
+  <html lang="en">
+  <!-- FORMATO CSS-->  
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+   <!-- ENCABEZADO-->  
+<body >
+<div class="container">
+    <header class="header">
+    <h1 id="title" class="text-center">Loren </h1>
+    <p id="description" class="description text-center"> Gracias por contactarnos, dejanos tu comentario por aca!</p>
+    </header>
+ <!-- INICIO FORMULARIO-->  
+<form id="survey-form">
+      <!--ASUNTO-->  
+      <div class="form-group">
+      <label>Asunto</label>
+      <select id="dropdown" name="role" class="form-control" required>
+      <option disabled selected value>En que podemos ayudarte?</option>
+      <option value="Consulta">Consulta</option> 
+      <option value="Reclamos">Reclamos</option>
+      <option value="Sugerencias">Sugerencias</option>
+      <option value="Otros">Otros</option>
+          </select>
+      </div>
+<hr>
+<!--COMENTARIOS-->  
+      <div class="form-group">
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Gracias por ayudarnos a crecer..."></textarea>
+      </div>
+
+<form id="survey-form">
+     <!--NOMBRE-->
+     <div class="form-group">
+    <label id="name-label" for="name">Nombre<input 
+      id="name" 
+      name="name"
+      type="text" 
+      class="form-control"
+      placeholder="Ingrese su nombre"
+      required></input></label>
+      </div>
+
+      <!--APELLIDO-->
+      <div class="form-group">
+      <label id="lastname-label"  for="lastname">Apellido<input 
+      id="lastname" 
+      name="lastname"
+      type="text"
+      class="form-control" 
+      placeholder="Ingrese su apellido"
+      required></input></label>
+      </div>
+
+      <!--EMAIL-->
+      <div class="form-group">
+      <label id="email-label" for="email">Email<input 
+      id="email" 
+      name="email"
+      type="email"
+      class="form-control"
+      placeholder="Ingrese su email"
+      required></input></label>
+      </div>
+
+      <!--TELEFONO-->
+      <div class="form-group">
+      <label id="number-label" for="number">Telefono<input 
+      min="10"
+      max="12"
+      id="number"
+      name="number"
+      type="number" 
+      class="form-control"
+      placeholder="Ingrese su telefono"
+      required></input></label>
+      </div>
+<hr>
+      <!--RECOMENDACION-->
+      <div class="form-group">
+        <p>Nos recomendarias?</p>
+        <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />Definitivamente</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />Quiza</label
+          >
+
+          <label
+            ><input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />No estoy seguro</label
+          >
+      </div>  
+            <!--PREFERENICIAS-->  
+       <div class="form-group">
+          <p>Que te gusto mas?</p>
+          <label
+            ><input
+              name="prefer"
+              value="front-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />Desayunos</label
+          >
+          <label>
+            <input
+              name="prefer"
+              value="back-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />Box especiales</label>
+          <label>
+            <input
+              name="prefer"
+              value="back-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />Cuadros</label>
+          <label>
+            <input
+              name="prefer"
+              value="back-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />Agendas y Libros</label>
+      </div>
+<hr>
+      <div>
+      <label>
+      <b >*Todos los campos son obligatorios*</b>
+       
+          
+      </label>
+      <!--BOTON ENVIAR-->
+      <div class="form-group">
+          <button 
+          type="submit" 
+          id="submit" class="submit-button">
+            Enviar
+          </button>
+        </div>
+       </div> 
+ 
+  </form>
+  </div>
+  </body>
+  
+  </html>
+
+** end of undefined **
+
+** start of undefined **
+
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+background:#e0ebeb;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #4d1a00;
+  margin: 0;
+  }
+.description {
+  text-align:center;
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+    background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+    	 #d1d1e0,
+      rgba(136, 136, 206, 0.7)
+    );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+h1{
+  background-color:#006666;
+  color:white;
+  text-align:center;
+  font-family:sans-serif;
+  font-size:55px;
+  text-shadow: #474747 3px 5px 2px;}
+
+
+.form-control {
+  width: 50%;
+  margin-top:5px;
+  margin-left:25px;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #ffff99;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #ffff99;
+}
+
+  .submit-button {
+  font-size:15px;  
+  width: 40%;
+  padding: 0.75rem;
+  background-color:#006666;
+  color:white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+#survey-form{
+margin:auto; 
+padding-left:15px; 
+width:60%;
+height:70%;
+background-color:white;
+border-radius: 10px;
+}
+
+
+** end of undefined **
+
